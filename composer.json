@@ -15,7 +15,8 @@
     "php": ">=7.3",
     "johnpbloch/wordpress-core-installer": "^2.0",
     "johnpbloch/wordpress-core": "^5.9",
-    "wpackagist-plugin/where-used": "^1"
+    "wpackagist-plugin/where-used": "^1",
+    "wpackagist-theme/twentynineteen": "^2"
   },
   "extra": {
     "installer-paths": {
