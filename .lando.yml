@@ -1,0 +1,35 @@
+name: lando-wp-composer
+recipe: wordpress
+config:
+  env: dev
+  xdebug: false
+  php: '7.4'
+  webroot: wordpress
+  composer_version: 2.2.14
+proxy:
+  mailhog:
+    - mail.localwpcomposer.lndo.site
+  phpmyadmin:
+    - phpmyadmin.localwpcomposer.lndo.site
+services:
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database
+tooling:
+  install:
+    description: Just a composer install
+    cmd:
+      - appserver: composer --version
+      - appserver: composer install
+    dir: /app
+  install:dry:
+    description: Dry run of composer install
+    service: appserver
+    cmd: composer install --dry-run
+    dir: /app
