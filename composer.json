@@ -1,6 +1,7 @@
 {
   "name": "biltmoreco/lando-wp-composer",
   "description": "Use Lando to run WordPress using Composer.",
+  "type": "project",
   "repositories":[
     {
       "type":"composer",
