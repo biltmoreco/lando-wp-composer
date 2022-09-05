@@ -29,7 +29,14 @@ tooling:
     dir: /app
   install:dry:
     description: Dry run of composer install
+    appserver: composer install --dry-run
+    dir: /app
+  versions:
+    description: Output version info
     cmd:
+      - database: mysql -V
+      - appserver: php --version
+      - appserver: apache2 -v
       - appserver: composer --version
-      - appserver: composer install --dry-run
+      - appserver: wp --version
     dir: /app
