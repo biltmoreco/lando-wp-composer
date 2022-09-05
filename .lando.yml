@@ -1,4 +1,4 @@
-name: lando-wp-composer
+name: local-wp-composer
 recipe: wordpress
 config:
   env: dev
