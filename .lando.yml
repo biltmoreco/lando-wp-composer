@@ -13,8 +13,6 @@ proxy:
     - phpmyadmin.localwpcomposer.lndo.site
 services:
   appserver:
-    composer:
-      phpunit/phpunit: ^6
     build:
       - composer install
     # post-start:
