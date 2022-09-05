@@ -1,27 +1,16 @@
 {
-  "name": "johnpbloch/wordpress",
-  "description": "WordPress is web software you can use to create a beautiful website or blog.",
-  "keywords": [
-    "wordpress",
-    "blog",
-    "cms"
-  ],
-  "type": "package",
-  "homepage": "http://wordpress.org/",
-  "license": "GPL-2.0+",
-  "authors": [
+  "name": "Lando Composer Local WordPress",
+  "description": "Use Lando to run WordPress using Composer.",
+  "repositories":[
     {
-      "name": "WordPress Community",
-      "homepage": "http://wordpress.org/about/"
+      "type":"composer",
+      "url":"https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
     }
   ],
-  "support": {
-    "issues": "http://core.trac.wordpress.org/",
-    "forum": "http://wordpress.org/support/",
-    "wiki": "http://codex.wordpress.org/",
-    "irc": "irc://irc.freenode.net/wordpress",
-    "source": "http://core.trac.wordpress.org/browser"
-  },
   "require": {
     "php": ">=7.3",
     "johnpbloch/wordpress-core-installer": "^2.0",
