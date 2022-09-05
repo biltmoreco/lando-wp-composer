@@ -1,5 +1,5 @@
 {
-  "name": "Lando Composer Local WordPress",
+  "name": "biltmoreco/lando-wp-composer",
   "description": "Use Lando to run WordPress using Composer.",
   "repositories":[
     {
