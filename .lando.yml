@@ -24,12 +24,12 @@ services:
 tooling:
   install:
     description: Just a composer install
-    cmd:
-      - appserver: composer --version
-      - appserver: composer install
+    service: appserver
+    cmd: composer install
     dir: /app
   install:dry:
     description: Dry run of composer install
-    service: appserver
-    cmd: composer install --dry-run
+    cmd:
+      - appserver: composer --version
+      - appserver: composer install --dry-run
     dir: /app
