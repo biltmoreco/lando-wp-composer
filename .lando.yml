@@ -12,6 +12,13 @@ proxy:
   phpmyadmin:
     - phpmyadmin.localwpcomposer.lndo.site
 services:
+  appserver:
+    composer:
+      phpunit/phpunit: ^6
+    build:
+      - composer install
+    # post-start:
+    #   - bash ./scripts/post-start.sh
   mailhog:
     type: mailhog
     portforward: true
